@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 import { Product } from "../../components";
 import { useState } from "react";
+import { useCart } from "../../func/functions";
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {
@@ -50,6 +51,8 @@ const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
 
   const [index, setIndex] = useState(0);
+
+  const { qty, incrementQty, decrementQty, addToCart } = useCart();
   return (
     <div className={styles.product__details__ctn}>
       <div className={styles.product__details__inner}>
@@ -96,19 +99,35 @@ const ProductDetails = ({ product, products }) => {
           <div className={styles.quantity}>
             <h3>Quantity: </h3>
             <div className={styles.quantity__desc}>
-              <span onClick="" className={styles.minus}>
+              <span
+                onClick={() => {
+                  if (qty > 1) {
+                    decrementQty();
+                  }
+                }}
+                className={styles.minus}
+              >
                 <AiOutlineMinus />
               </span>
-              <span onClick="" className={styles.num}>
-                0
-              </span>
-              <span onClick="" className={styles.plus}>
+              <span className={styles.num}>{qty}</span>
+              <span
+                onClick={() => {
+                  if (qty < 10) {
+                    incrementQty();
+                  }
+                }}
+                className={styles.plus}
+              >
                 <AiOutlinePlus />
               </span>
             </div>
           </div>
           <div className={styles.buttons}>
-            <button type="button" className={styles.add__to__cart}>
+            <button
+              type="button"
+              className={styles.add__to__cart}
+              onClick={() => addToCart(product)}
+            >
               Add to Cart
             </button>
             <button type="button" className={styles.buy__now}>
