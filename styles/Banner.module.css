@@ -1,0 +1,80 @@
+.banner__ctn {
+  width: 100%;
+  background-color: #dcdcdc;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  height: 100%;
+  line-height: 0.7;
+  padding: 60px 0;
+}
+
+.banner__inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.beats__solo {
+  font-size: 20px;
+  color: #5f5f5f;
+}
+
+.banner__link {
+  border-radius: 15px;
+  padding: 0.6em 1em;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10000 !important;
+}
+
+.mid__text {
+  font-size: 4rem;
+  margin-top: 4px;
+}
+
+.banner__inner h1 {
+  color: white;
+  font-size: 10em;
+  margin-top: -30px;
+  text-transform: uppercase;
+}
+
+.banner__img {
+  position: absolute;
+  top: 0%;
+  right: 20%;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  margin-left: auto;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #324d67;
+}
+
+.description p {
+  color: #5f5f5f;
+  font-weight: 100;
+  text-align: end;
+}
+.description h5 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  /* color: black; */
+  align-self: flex-end;
+}
