@@ -1,0 +1,55 @@
+.footer__banner__ctn {
+  padding: 80px 0;
+  background-color: #f02d34;
+  border-radius: 15px;
+  position: relative;
+  height: 100%;
+  line-height: 1;
+  color: white;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.banner__desc {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.banner__desc button {
+  border-radius: 15px;
+  padding: 0.6em 1em;
+  background-color: white;
+  color: red;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.banner__desc .lhs h3 {
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 0.2;
+}
+.banner__desc .lhs p {
+  margin: 18px;
+}
+.footer__banner__img {
+  position: absolute;
+  top: -25%;
+  left: 25%;
+}
+
+.banner__desc .rhs h3 {
+  font-weight: 800;
+  font-size: 60px;
+}
+.banner__desc .rhs p {
+  font-size: 18px;
+}
+.banner__desc .rhs .company-desc {
+  font-size: 14px;
+  font-weight: 300;
+}

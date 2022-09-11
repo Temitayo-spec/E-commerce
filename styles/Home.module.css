@@ -5,3 +5,26 @@
 .main {
   min-height: 100%;
 }
+
+.products__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 90%;
+  margin: 1.5em auto;
+}
+
+.products__heading {
+  text-align: center;
+  margin: 3em 0;
+  color: #324d67;
+}
+.products__heading h2 {
+  font-size: 2.5em;
+  font-weight: 800;
+}
+.products__heading p {
+  font-size: 1em;
+  font-weight: 200;
+}

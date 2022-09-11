@@ -40,13 +40,17 @@ export default function Home({ products, banner }) {
       <main className={styles.main}>
         {/* <Navbar /> */}
         <Banner banner={banner.length && banner[0]} />
-        <div className={styles.product__wrapper}>
+        <div className={styles.products__heading}>
+          <h2>Best Seller Products</h2>
+          <p>speaker There are many variations passages</p>
+        </div>
+        <div className={styles.products__wrapper}>
           {products?.map((product) => (
             <Product key={product._id} product={product} />
           ))}
         </div>
-        <Cart />
-        <Footer />
+        {/* <Cart /> */}
+        <FooterBanner banner={banner && banner[0]} />
       </main>
     </div>
   );
