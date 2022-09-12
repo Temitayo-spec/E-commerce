@@ -82,7 +82,7 @@ const Cart = () => {
                           <span className={styles.num}>
                             {
                               // Get the quantity of the item
-                              item.quantity
+                              item.qty
                             }
                           </span>
                           <span
@@ -95,7 +95,12 @@ const Cart = () => {
                           </span>
                         </div>
                       </div>
-                      <button type="button" className={styles.delete__btn}>
+                      <button type="button" className={styles.delete__btn}
+                        onClick={() => {
+                          removeFromCart(item._id);
+                          toast.success("Item removed from cart");
+                        }}
+                      >
                         <TiDeleteOutline />
                       </button>
                     </div>
