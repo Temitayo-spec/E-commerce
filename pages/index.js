@@ -42,7 +42,7 @@ export default function Home({ products, banner }) {
         <Banner banner={banner.length && banner[0]} />
         <div className={styles.products__heading}>
           <h2>Best Seller Products</h2>
-          <p>speaker There are many variations passages</p>
+          <p>Transition through speakers.</p>
         </div>
         <div className={styles.products__wrapper}>
           {products?.map((product) => (

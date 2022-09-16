@@ -2,10 +2,11 @@
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
-  color: #324d67;
+  color: #f5f5f5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 0.5em;
   border-radius: 10px;
+  background: #324d67;
 }
 
 .product__card:hover {
@@ -13,11 +14,13 @@
 }
 
 .product__image {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #ebebeb;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
-  object-fit: cover;
+  object-fit: contain;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .product__name {
@@ -27,5 +30,12 @@
 .product__price {
   font-weight: 800;
   margin-top: 6px;
-  color: black;
+  color: #f02d34;
+}
+
+
+@media screen and (max-width: 800px) {
+  .product__card {
+    width: 80%;
+  }
 }

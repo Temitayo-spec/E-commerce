@@ -6,10 +6,9 @@
 
 .banner__inner {
   width: 90%;
-  background-color: #dcdcdc;
-  padding: 60px 0;
+  background-color: #f2f2f2;
+  padding: 3em;
   border-radius: 15px;
-  line-height: 0.7;
   margin: 0 auto;
 }
 
@@ -38,8 +37,8 @@
 .banner__inner h1 {
   color: white;
   font-size: 10em;
-  margin-top: -30px;
   text-transform: uppercase;
+  text-shadow: 5px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .banner__img {
@@ -57,6 +56,7 @@
 }
 
 .description {
+  margin-top: auto;
   margin-left: auto;
   line-height: 1.3;
   display: flex;
@@ -84,24 +84,47 @@
     height: 560px;
   }
 
-  .banner__img {
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
+  .banner__inner {
+    padding: 2em;
   }
 
-  .banner__inner {
-    line-height: 1.3;
+  .banner__img {
+    width: 60%;
+    height: 40%;
+    top: 10%;
+    right: 0%;
   }
+
   .banner__inner h1 {
     font-size: 50px;
   }
   .banner__inner h3 {
     font-size: 40px;
+    padding-right: 1em;
   }
+
   .banner__link {
-    margin-top: 90px;
-    z-index: 10000;
+    margin-top: 5em;
+    font-size: 0.9em;
+    padding: 1em ;
+    width: 100%;
+  }
+
+  .mid__text {
+    font-size: 2rem;
+  }
+
+  .beats__solo {
+    font-size: 1em;
+  }
+
+  .description {
+    width: 100%;
+    margin-left: 2em;
+  }
+
+  .description p {
+    font-weight: 100;
+    font-size: 0.6em;
   }
 }

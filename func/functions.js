@@ -12,7 +12,7 @@ import {
 } from "../store/cartSlice";
 
 import { useDispatch, useSelector } from "react-redux";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 
 export const useCart = () => {
   const dispatch = useDispatch(),
@@ -49,9 +49,7 @@ export const useCart = () => {
       }
       dispatch(setTotalItems(totalItems + qty));
       dispatch(setTotalPrice(totalPrice + product.price * qty));
-      // dispatch(setQty(1));
       toast.success(`${qty} ${product.name} added to cart`);
-      // dispatch(toggleCart());
     },
     toggleCartItemQuantity = (id, value) => {
       foundProduct = cartItems.find((item) => item._id === id);
@@ -93,12 +91,18 @@ export const useCart = () => {
     setShowCart = () => {
       dispatch(toggleCart());
     },
-    payWithStripe = () => {};
+    onBuyNow = (product) => {
+      addToCart(product);
+      setShowCart();
+    };
   return {
     cartItems,
     totalPrice,
     totalItems,
     qty,
+    setCartItems,
+    setTotalPrice,
+    setTotalItems,
     showCart,
     incrementQty,
     decrementQty,
@@ -106,5 +110,6 @@ export const useCart = () => {
     setShowCart,
     toggleCartItemQuantity,
     removeFromCart,
+    onBuyNow,
   };
 };

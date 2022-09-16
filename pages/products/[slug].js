@@ -52,7 +52,7 @@ const ProductDetails = ({ product, products }) => {
 
   const [index, setIndex] = useState(0);
 
-  const { qty, incrementQty, decrementQty, addToCart } = useCart();
+  const { qty, incrementQty, decrementQty, addToCart, onBuyNow } = useCart();
   return (
     <div className={styles.product__details__ctn}>
       <div className={styles.product__details__inner}>
@@ -130,7 +130,11 @@ const ProductDetails = ({ product, products }) => {
             >
               Add to Cart
             </button>
-            <button type="button" className={styles.buy__now}>
+            <button
+              type="button"
+              className={styles.buy__now}
+              onClick={() => onBuyNow(product)}
+            >
               Buy Now
             </button>
           </div>

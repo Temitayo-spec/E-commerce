@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Raleway", sans-serif;
+    /* a very nice dark color */
+    background: #1e1e1e;
 }
 
 a {
@@ -32,78 +34,7 @@ span.text-red {
   font-weight: 500;
   color: #f02d34;
 }
-.success__wrapper,
-.cancel__wrapper {
-  background-color: white;
-  min-height: 60vh;
-}
-.success,
-.cancel {
-  width: 1000px;
-  margin: auto;
-  margin-top: 160px;
-  background-color: #dcdcdc;
-  padding: 50px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.success .icon {
-  color: green;
-  font-size: 40px;
-}
-.success h2 {
-  text-transform: capitalize;
-  margin-top: 15px 0px;
-  font-weight: 900;
-  font-size: 40px;
-  color: #324d67;
-}
-.success .email-msg {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-}
-.cancel p {
-  font-size: 20px;
-  font-weight: 600;
-}
-.success .description {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  margin: 10px;
-  margin-top: 30px;
-}
-.success .description .email {
-  margin-left: 5px;
-  color: #f02d34;
-}
 .product-max-qty {
   margin-top: 10px;
-}
-
-@media screen and (max-width: 800px) {
-  .desc {
-    bottom: 60px;
-  }
-  .success-wrapper,
-  .cancel-wrapper {
-    min-height: 69vh;
-  }
-  .success,
-  .cancel {
-    width: 370px;
-    margin-top: 100px;
-    padding: 20px;
-  }
-  .success {
-    height: 350px;
-  }
-  .success h2 {
-    font-size: 17px;
-  }
 }

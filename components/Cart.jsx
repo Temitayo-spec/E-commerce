@@ -8,7 +8,7 @@ import {
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 import { useCart } from "../func/functions";
 import { urlFor } from "../lib/client";
 import { getStripe } from "../lib/getSripe";
@@ -121,7 +121,6 @@ const Cart = () => {
                         className={styles.delete__btn}
                         onClick={() => {
                           removeFromCart(item._id);
-                          toast.success("Item removed from cart");
                         }}
                       >
                         <TiDeleteOutline />
