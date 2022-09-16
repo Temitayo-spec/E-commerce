@@ -1,15 +1,15 @@
 .banner__ctn {
   width: 100%;
-  background-color: #dcdcdc;
-  border-radius: 15px;
   position: relative;
   height: 100%;
-  line-height: 0.7;
-  padding: 60px 0;
 }
 
 .banner__inner {
   width: 90%;
+  background-color: #dcdcdc;
+  padding: 60px 0;
+  border-radius: 15px;
+  line-height: 0.7;
   margin: 0 auto;
 }
 
@@ -77,4 +77,31 @@
   font-size: 16px;
   /* color: black; */
   align-self: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+  .banner__ctn {
+    height: 560px;
+  }
+
+  .banner__img {
+    width: 77%;
+    height: 62%;
+    top: -2%;
+    right: -6%;
+  }
+
+  .banner__inner {
+    line-height: 1.3;
+  }
+  .banner__inner h1 {
+    font-size: 50px;
+  }
+  .banner__inner h3 {
+    font-size: 40px;
+  }
+  .banner__link {
+    margin-top: 90px;
+    z-index: 10000;
+  }
 }

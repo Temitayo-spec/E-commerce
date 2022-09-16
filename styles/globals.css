@@ -28,12 +28,12 @@ span.text-red {
   cursor: pointer;
 }
 
-.max-qty {
+.max__qty {
   font-weight: 500;
   color: #f02d34;
 }
-.success-wrapper,
-.cancel-wrapper {
+.success__wrapper,
+.cancel__wrapper {
   background-color: white;
   min-height: 60vh;
 }
@@ -87,124 +87,8 @@ span.text-red {
 }
 
 @media screen and (max-width: 800px) {
-  .hero-banner-container {
-    height: 560px;
-  }
-  .hero-banner-image {
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
-  }
-  .footer-banner-container {
-    height: 560px;
-    margin-top: 80px;
-  }
-  .footer-banner-image {
-    width: 77%;
-    left: 30%;
-    top: 6%;
-    height: 56%;
-  }
-  .banner-desc .left h3 {
-    font-weight: 900;
-    font-size: 50px;
-    margin-left: 5px;
-  }
-  .banner-desc .left p {
-    margin: 18px;
-  }
-  .banner-desc .right h3 {
-    font-size: 45px;
-  }
-  .banner-desc .right p {
-    font-size: 18px;
-  }
-  .banner-desc .right .company-desc {
-    font-size: 14px;
-  }
-  .banner-desc {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .hero-banner-container {
-    line-height: 1.3;
-  }
-  .hero-banner-container h1 {
-    font-size: 50px;
-  }
-  .hero-banner-container h3 {
-    font-size: 40px;
-  }
-  .hero-banner-container button {
-    margin-top: 90px;
-    z-index: 10000;
-  }
   .desc {
     bottom: 60px;
-  }
-  .product-detail-container {
-    flex-wrap: wrap;
-  }
-  .product-detail-container .product-detail-image {
-    width: 350px;
-    height: 350px;
-  }
-  .cart-container {
-    width: 415px;
-    padding: 4px;
-  }
-  .cart-heading {
-    margin-top: 35px;
-  }
-  .product-container {
-    margin-top: 10px;
-  }
-  .product {
-    padding: 20px 5px;
-  }
-  .product .cart-product-image {
-    width: 25%;
-    height: 25%;
-  }
-  .buttons .add-to-cart {
-    width: 150px;
-  }
-  .buttons .buy-now {
-    width: 150px;
-  }
-  .product-detail-container {
-    margin: 20px;
-  }
-
-  .item-desc .flex {
-    width: 200px;
-  }
-  .top {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .item-desc .bottom {
-    margin-top: 30px;
-  }
-  .flex h5 {
-    font-size: 16px;
-    color: #324d67;
-  }
-  .flex h4 {
-    font-size: 16px;
-    color: black;
-  }
-  .cart-bottom {
-    padding: 30px;
-  }
-
-  .total h3 {
-    font-size: 20px;
-  }
-  .track {
-    animation: marquee 10s linear infinite;
-    width: 550%;
   }
   .success-wrapper,
   .cancel-wrapper {
@@ -221,9 +105,5 @@ span.text-red {
   }
   .success h2 {
     font-size: 17px;
-  }
-  .btn-container {
-    width: 300px;
-    margin: auto;
   }
 }

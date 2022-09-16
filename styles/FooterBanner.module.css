@@ -28,14 +28,17 @@
   font-weight: 500;
   cursor: pointer;
 }
+
 .banner__desc .lhs h3 {
   font-weight: 900;
   font-size: 80px;
   line-height: 0.2;
 }
+
 .banner__desc .lhs p {
   margin: 18px;
 }
+
 .footer__banner__img {
   position: absolute;
   top: -25%;
@@ -46,10 +49,53 @@
   font-weight: 800;
   font-size: 60px;
 }
+
 .banner__desc .rhs p {
   font-size: 18px;
 }
-.banner__desc .rhs .company-desc {
+
+.banner__desc .rhs .company__desc {
   font-size: 14px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 800px) {
+  .footer__banner__ctn {
+    height: 560px;
+    margin-top: 80px;
+  }
+
+  .footer__banner__img {
+    width: 77%;
+    left: 30%;
+    top: 6%;
+    height: 56%;
+  }
+
+  .banner__desc .lhs h3 {
+    font-weight: 900;
+    font-size: 50px;
+    margin-left: 5px;
+  }
+
+  .banner__desc .lhs p {
+    margin: 18px;
+  }
+
+  .banner__desc .rhs h3 {
+    font-size: 45px;
+  }
+
+  .banner__desc .rhs p {
+    font-size: 18px;
+  }
+
+  .banner__desc .rhs .company__desc {
+    font-size: 14px;
+  }
+
+  .banner__desc {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }

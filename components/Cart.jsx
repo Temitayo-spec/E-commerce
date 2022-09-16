@@ -11,18 +11,39 @@ import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
 import { useCart } from "../func/functions";
 import { urlFor } from "../lib/client";
+import { getStripe } from "../lib/getSripe";
 import { useRef } from "react";
 
 const Cart = () => {
   const cartRef = useRef();
   const {
-    cartItems,
-    setShowCart,
-    totalItems,
-    totalPrice,
-    toggleCartItemQuantity,
-    removeFromCart,
-  } = useCart();
+      cartItems,
+      setShowCart,
+      totalItems,
+      totalPrice,
+      toggleCartItemQuantity,
+      removeFromCart,
+    } = useCart(),
+    handleCheckOut = async () => {
+      const stripe = await getStripe();
+
+      const response = await fetch("/api/stripe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartItems),
+      });
+
+      const data = await response.json();
+
+      toast.loading("Redirecting to checkout...");
+
+      stripe.redirectToCheckout({
+        sessionId: data.id,
+      });
+    };
+
   return (
     <div className={styles.cart__wrapper} ref={cartRef}>
       <div className={styles.cart__ctn}>
@@ -95,7 +116,9 @@ const Cart = () => {
                           </span>
                         </div>
                       </div>
-                      <button type="button" className={styles.delete__btn}
+                      <button
+                        type="button"
+                        className={styles.delete__btn}
                         onClick={() => {
                           removeFromCart(item._id);
                           toast.success("Item removed from cart");
@@ -119,9 +142,7 @@ const Cart = () => {
               </div>
               <div className={styles.btn__ctn}>
                 <button
-                  onClick={() => {
-                    toast.success("Checkout is not available yet");
-                  }}
+                  onClick={handleCheckOut}
                   type="button"
                   className={styles.checkout__btn}
                 >
