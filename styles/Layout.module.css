@@ -3,6 +3,10 @@
   margin: auto;
   width: 100%;
 }
+
 .layout__ctn {
-  padding: 10px;
+  padding: 0.4em;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }

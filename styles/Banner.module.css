@@ -26,7 +26,6 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  z-index: 10000 !important;
 }
 
 .mid__text {
@@ -95,16 +94,20 @@
     right: 0%;
   }
 
+  .contents {
+    margin-top: 5.2em;
+  }
+
   .banner__inner h1 {
     font-size: 50px;
   }
+
   .banner__inner h3 {
     font-size: 40px;
-    padding-right: 1em;
+    padding-right: 2em;
   }
 
   .banner__link {
-    margin-top: 5em;
     font-size: 0.9em;
     padding: 1em ;
     width: 100%;
