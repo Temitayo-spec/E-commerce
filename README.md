@@ -1,3 +1,10 @@
+# E-commerce App
+This is an E-commerce app built with Nextjs, Sanity as a headless CMS, Stripe for payment integrations and Redux Toolkit for State Management.🎉✨
+
+
+
+############
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
